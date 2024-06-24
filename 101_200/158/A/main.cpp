@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main()
@@ -9,9 +10,20 @@ int main()
   int checkIndex;
 
   cin >> numberPeople >> checkIndex;
-  int peopleArray[numberPeople];
+  vector<int> peopleArray(numberPeople, 0);
   for (int i = 0; i < numberPeople; i++)
   {
-    cin >>
+    cin >> peopleArray[i];
   }
+
+  int count = 0;
+  for (int i = 0; i < numberPeople; i++)
+  {
+    if (peopleArray[i] >= peopleArray[checkIndex - 1] && peopleArray[i] > 0)
+    {
+      count++;
+    }
+  }
+  cout << count;
+  return 0;
 }
