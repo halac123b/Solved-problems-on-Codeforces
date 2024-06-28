@@ -12,7 +12,7 @@ int main()
   cin >> inputString;
 
   // Lấy các số từ string rồi push vào vector
-  for (int i = 0; i < inputString.length(); i += 2)
+  for (unsigned int i = 0; i < inputString.length(); i += 2)
   {
     numberList.push_back(inputString[i] - '0');
   }
